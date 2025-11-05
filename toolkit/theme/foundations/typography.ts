@@ -4,8 +4,10 @@ import type { ExcludeUndefined } from 'types/utils';
 
 import config from 'configs/app';
 
-export const BODY_TYPEFACE = config.UI.fonts.body?.name ?? 'Inter, InterFallback';
-export const HEADING_TYPEFACE = config.UI.fonts.heading?.name ?? 'Poppins';
+const DEFAULT_MONA_SANS_STACK = 'Mona Sans, Inter, InterFallback';
+
+export const BODY_TYPEFACE = config.UI.fonts.body?.name ?? DEFAULT_MONA_SANS_STACK;
+export const HEADING_TYPEFACE = config.UI.fonts.heading?.name ?? DEFAULT_MONA_SANS_STACK;
 
 export const fonts: ExcludeUndefined<ThemingConfig['tokens']>['fonts'] = {
   heading: { value: `${ HEADING_TYPEFACE }, sans-serif` },

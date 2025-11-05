@@ -40,10 +40,14 @@ dotenv \
 source ./deploy/scripts/build_sprite.sh
 echo ""
 
+git_commit_sha=$(git rev-parse --short HEAD 2>/dev/null || echo "unknown")
+# fall back to commit hash when no git tags are present
+git_tag=$(git describe --tags --abbrev=0 2>/dev/null || echo "${git_commit_sha}")
+
 # generate envs.js file and run the app
 dotenv \
-  -v NEXT_PUBLIC_GIT_COMMIT_SHA=$(git rev-parse --short HEAD) \
-  -v NEXT_PUBLIC_GIT_TAG=$(git describe --tags --abbrev=0) \
+  -v NEXT_PUBLIC_GIT_COMMIT_SHA="${git_commit_sha}" \
+  -v NEXT_PUBLIC_GIT_TAG="${git_tag}" \
   -v NEXT_PUBLIC_ICON_SPRITE_HASH="${NEXT_PUBLIC_ICON_SPRITE_HASH}" \
   -e $config_file \
   -e $secrets_file \

@@ -6,6 +6,9 @@ const heroBannerButton = config.UI.homepage.heroBanner?.button;
 
 const semanticTokens: ThemingConfig['semanticTokens'] = {
   colors: {
+    blackAlpha: {
+      '100': { value: { _light: '#E4E4E4', _dark: '#13181C' } },
+    },
     // COMMON STATES
     hover: {
       DEFAULT: { value: { _light: '{colors.theme.hover._light}', _dark: '{colors.theme.hover._dark}' } },
