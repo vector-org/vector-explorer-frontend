@@ -8,8 +8,8 @@ const DEFAULT_THEME_COLORS = {
       // for some reason links to colors.white and colors.black variables are not working here
       // so we use hex values instead
       // but it is not the case for other colors
-      _light: { value: '#FFFFFF' }, // colors.white
-      _dark: { value: '#101112' }, // colors.black
+      _light: { value: '#FFFFFF' },
+      _dark: { value: '#1A2228' },
     },
   },
   text: {
@@ -62,8 +62,8 @@ const DEFAULT_THEME_COLORS = {
   },
   link: {
     primary: {
-      _light: { value: '{colors.blue.600}' },
-      _dark: { value: '{colors.blue.300}' },
+      _light: { value: '#2A3431' },
+      _dark: { value: '#F5F5F5' },
     },
   },
   graph: {
@@ -98,14 +98,14 @@ const DEFAULT_THEME_COLORS = {
   },
   stats: {
     bg: {
-      _light: { value: '{colors.gray.50}' },
-      _dark: { value: '{colors.whiteAlpha.100}' },
+      _light: { value: '#F5F5F5' },
+      _dark: { value: '#13181C' },
     },
   },
   topbar: {
     bg: {
-      _light: { value: '{colors.gray.50}' },
-      _dark: { value: '{colors.whiteAlpha.100}' },
+      _light: { value: '#F5F5F5' },
+      _dark: { value: '#1A2228' },
     },
   },
   tabs: {
